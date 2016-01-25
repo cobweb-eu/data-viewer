@@ -42,6 +42,6 @@ $(document).ready(function() {
 	addGeoJSONData("/wug", markers, "Weather Underground");
 	addGeoJSONData("/saltmarsh", markers, "Salt Marsh");
 	addGeoJSONData("/peatbog", markers, "Peat Bog");
-	addGeoJSONData("/shoothill", markers, 1, "Shoothill");
+	addGeoJSONData("/shoothill", markers, "Shoothill",1);
 
 });

@@ -1,6 +1,6 @@
 // Displays sensor data on a Fancy Box popup using a Google chart
 function displayData(endpoint, desc) {
-
+	
 	$
 			.getJSON(
 					endpoint,
@@ -8,6 +8,12 @@ function displayData(endpoint, desc) {
 						var data = google.visualization
 								.arrayToDataTable(datajson);
 						var dv = 2;
+						if(window.mobileAndTabletcheck()){
+						    dv=1;
+						} 
+
+						
+
 						var options = {
 							title : desc + ' Sensor Data',
 							'width' : screen.width - (screen.width / dv),

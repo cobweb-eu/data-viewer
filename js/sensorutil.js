@@ -8,8 +8,14 @@ function displayData(endpoint, desc) {
 						var data = google.visualization
 								.arrayToDataTable(datajson);
 						var dv = 2;
+						var dv2=2;
+						var wd="45%";
+						var ht="50%";
 						if(window.mobileAndTabletcheck()){
 						    dv=1;
+						    dv2=5;
+						    wd="30%";
+						    ht="35%";
 						} 
 
 						
@@ -17,10 +23,10 @@ function displayData(endpoint, desc) {
 						var options = {
 							title : desc + ' Sensor Data',
 							'width' : screen.width - (screen.width / dv),
-							'height' : screen.height - (screen.height / dv),
+							'height' : screen.height - (screen.height / dv2),
 							chartArea : {
-								width : "45%",
-								height : "50%"
+								width : wd,
+								height : ht
 							}
 						};
 						var chart = new google.visualization.LineChart(document
